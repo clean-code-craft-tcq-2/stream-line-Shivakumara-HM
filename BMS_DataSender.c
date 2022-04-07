@@ -9,19 +9,12 @@ void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate)
   FILE* fp = fopen("./BMS_DataParameter.txt","r");
   float Temp_readings, SOC_readings, ChargeRate_readings;
   
-  if(fp == NULL)
-  {
-    printf("file not found\n");
-  }
-  else
-  {
-    for(int i=0; fscanf(fp, "%f \t %f \t %f \n", &Temp_readings,&SOC_readings,&ChargeRate_readings)!=EOF; i++)
+  for(int i=0; fscanf(fp, "%f \t %f \t %f \n", &Temp_readings,&SOC_readings,&ChargeRate_readings)!=EOF; i++)
     {
       *(Temperature + i) = Temp_readings;
       *(SOC + i) = SOC_readings;
       *(ChargeRate + i) = ChargeRate_readings;
     }
-  }
   fclose(fp);
 }
 
