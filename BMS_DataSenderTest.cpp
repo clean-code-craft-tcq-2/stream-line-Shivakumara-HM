@@ -10,7 +10,7 @@ TEST_CASE("Test to verify the data read")
   readBMSDataFromFile(Temperature, SOC, ChargeRate);
   float expectedOutput[3][3] = {{49,66,0.34}, {28,67,0.8},{88,90,0.52}};
  
-  for(int i = 0; i < 2; i++)
+  for(int i = 0; i < 3; i++)
   {
     REQUIRE(Temperature[i] == expectedOutput[i][0]);
     REQUIRE(SOC[i] == expectedOutput[i][1]);
