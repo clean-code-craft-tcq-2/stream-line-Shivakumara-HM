@@ -1,4 +1,4 @@
-#define  No_of_Readings 40
+#define  No_of_Readings 50
 
 void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate);
 void sendBMSDataToConsole(float* Temperature, float* SOC, float* ChargeRate);
