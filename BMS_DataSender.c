@@ -15,7 +15,6 @@ void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate)
       *(SOC + i) = SOC_readings;
       *(ChargeRate + i) = ChargeRate_readings;
     }
-  }
   fclose(fp);
 }
 
