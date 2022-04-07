@@ -36,7 +36,7 @@ void printOnConsole(float TempPrint, float SOCPrint, float ChargeRatePrint)
   printf("Temperature: %.2f\t SOC: %.2f\t ChargeRate: %.2f\n", TempPrint,SOCPrint,ChargeRatePrint);
 }
 
-void BMS_DataSender()
+void bms_DataSender()
 {
   float Temperature[No_of_Readings], SOC[No_of_Readings], ChargeRate[No_of_Readings] = {0};
   readBMSDataFromFile(Temperature, SOC, ChargeRate);
