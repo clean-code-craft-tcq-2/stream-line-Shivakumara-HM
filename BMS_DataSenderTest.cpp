@@ -8,8 +8,7 @@ TEST_CASE("Test to verify the data read")
 {
   float Temperature[No_of_Readings], SOC[No_of_Readings], ChargeRate[No_of_Readings] = {0};
   readBMSDataFromFile(Temperature, SOC, ChargeRate);
-  float expectedOutput[2][3] = {{20, 36, 0.5},
-                                {25, 34, 0.7}};
+  float expectedoutput[3][3] = {{49,66,0.34}, {28,67,0.8},{88,90,0.52}};
  
   for(int i = 0; i < 2; i++)
   {
