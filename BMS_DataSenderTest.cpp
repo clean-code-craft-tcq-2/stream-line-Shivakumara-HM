@@ -9,7 +9,7 @@ TEST_CASE("Test to verify the sensors data sent to console")
   float Temperature_loc, SOC_loc, ChargeRate_loc;
   float Temperature[No_of_Readings], SOC[No_of_Readings], ChargeRate[No_of_Readings] = {0};
   float ExpectedTemperature[No_of_Readings], ExpectedSOC[No_of_Readings], ExpectedChargeRate[No_of_Readings] = {0};
-  bms_DataSender();
+  bms_DataSender(Temperature, SOC, ChargeRate);
     
   FILE *file = fopen("./BMS_SensorsData.txt","r");                                                                  
   for(int i=0; i<No_of_Readings; i++)
