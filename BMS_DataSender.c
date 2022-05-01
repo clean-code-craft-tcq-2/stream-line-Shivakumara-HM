@@ -7,7 +7,7 @@
 /* Prepare sensors data to be sent to console */
 void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate)
 {
-  FILE* fp = fopen("./BMS_DataParameter.txt","r");
+  FILE* fp = fopen("./BMS_SensorsData.txt","r");
   float Temp_readings, SOC_readings, ChargeRate_readings;
   
   for(int i=0; fscanf(fp, "%f \t %f \t %f \n", &Temp_readings,&SOC_readings,&ChargeRate_readings)!=EOF; i++)
