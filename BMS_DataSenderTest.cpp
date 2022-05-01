@@ -16,11 +16,11 @@ TEST_CASE("Test to verify the sensors data sent to console")
    {
      if (file!=NULL) 
      {
-        for(int i=0; fscanf(file, "%f \t %f \t %f \n", &Temperature_loc,&SOC_loc,&ChargeRate_loc)!=EOF; i++)
+        for(int i=0; fscanf(file, "%f \t %f \t %f \n", &Temperature_loc, &SOC_loc, &ChargeRate_loc)!=EOF; i++)
         {
             ExpectedTemperature[i] = Temperature_loc;
             ExpectedSOC[i] = SOC_loc;
-			ExpectedChargeRate = ChargeRate_loc;
+	    ExpectedChargeRate[i] = ChargeRate_loc;
         }
      }
        
