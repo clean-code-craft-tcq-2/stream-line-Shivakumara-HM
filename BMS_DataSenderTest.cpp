@@ -4,7 +4,7 @@
 #include "test/catch.hpp"
 #include "BMS_DataSender.h"
 
-TEST_CASE("Test to verify the data read")
+TEST_CASE("Test to verify the sensors data sent to console")
 {
   float Temperature_loc, SOC_loc, ChargeRate_loc;
   float Temperature[No_of_Readings], SOC[No_of_Readings], ChargeRate[No_of_Readings] = {0};
