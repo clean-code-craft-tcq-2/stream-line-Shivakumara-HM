@@ -11,7 +11,7 @@ TEST_CASE("Test to verify the sensors data sent to console")
   float ExpectedTemperature[No_of_Readings], ExpectedSOC[No_of_Readings], ExpectedChargeRate[No_of_Readings] = {0};
   readBMSDataFromFile(Temperature, SOC, ChargeRate);
     
-  FILE *file = fopen("./BMS_DataFromConsole.txt","r");                                                                  
+  FILE *file = fopen("./BMS_SensorsData.txt","r");                                                                  
   for(int i=0; i<No_of_Readings; i++)
    {
      if (file!=NULL) 
