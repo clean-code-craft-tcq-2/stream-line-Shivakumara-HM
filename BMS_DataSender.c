@@ -40,9 +40,8 @@ void printOnConsole(float TempPrint, float SOCPrint, float ChargeRatePrint)
 }
 
 /* bms_DataSender main function */
-void bms_DataSender()
+void bms_DataSender(float* Temperature, float* SOC, float* ChargeRate)
 {
-  float Temperature[No_of_Readings], SOC[No_of_Readings], ChargeRate[No_of_Readings] = {0};
   readBMSDataFromFile(Temperature, SOC, ChargeRate);
   sendBMSDataToConsole(Temperature, SOC, ChargeRate);  
 }
