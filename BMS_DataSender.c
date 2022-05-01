@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "BMS_DataSender.h"
 
-/* Prepare sensors data stream to be sent to console */
+/* Prepare sensors data to be sent to console */
 void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate)
 {
   FILE* fp = fopen("./BMS_DataParameter.txt","r");
@@ -19,7 +19,7 @@ void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate)
   fclose(fp);
 }
 
-/* Send sensors data stream to console */
+/* Send sensors data to console */
 void sendBMSDataToConsole(float* Temperature, float* SOC, float* ChargeRate)
 {
   float tempToPrint, SOCToPrint, chargeRateToPrint;
@@ -33,7 +33,7 @@ void sendBMSDataToConsole(float* Temperature, float* SOC, float* ChargeRate)
   }
 }
 
-/* Print Sensors data stream on console */
+/* Print Sensors data on console */
 void printOnConsole(float TempPrint, float SOCPrint, float ChargeRatePrint)
 {
   printf("Temperature: %.2f\t SOC: %.2f\t ChargeRate: %.2f\n", TempPrint,SOCPrint,ChargeRatePrint);
