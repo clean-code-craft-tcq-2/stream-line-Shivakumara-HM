@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "BMS_DataSender.h"
+#include "BMS_DataSende.h"
 
 /* Prepare sensors data to be sent to console */
 void readBMSDataFromFile(float* Temperature, float* SOC, float* ChargeRate)
